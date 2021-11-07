@@ -1,5 +1,42 @@
-.container {
+
+.my-container {
 	position: relative;
-	width: 30%;
-	color: red;
+	display: grid;
+	justify-content: space-evenly;
+	width: 80%;
+	margin-left: 10%;
 }
+
+
+.title-header {
+	position: relative;
+	text-align: center;
+}
+
+.header {
+	margin-top: 5%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+  }
+  
+  #court {
+	position: relative;
+	left: 35%;
+	right: 0px;
+	top: 50px;
+	bottom: 0px;
+  }
+  
+  .slider rect {
+	fill: gray;
+	shape-rendering: crispEdges;
+  }
+  
+  .slider line {
+	fill: none;
+	stroke: red;
+	opacity: 0.3;
+	shape-rendering: crispEdges;
+  }

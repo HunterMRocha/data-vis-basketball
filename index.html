@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Data Analytics In Basketball</title>
+		<title>Data Analytics In Basketball - Alpha Release</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="index.css">
+
+		<script src='https://d3js.org/d3.v4.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.min.js'></script>
+		<script src="https://d3js.org/d3-contour.v1.min.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	
+
+		<script src='Court.js'></script>
 	</head>
 	<body>
 		<!-- Title -->
-		<div class="title-header">
-			<h1>Data Analytics in Basketball</h1>
-			<h3 class="container">
+		<div class="header">
+			<h1 class="title-header">Data Analytics in Basketball - Alpha Release</h1>
+			<h3 class="my-container">
 				Description: <br>
 				Basketball statistics are typically analyzed and presented as summaries, either of a game, 
 				season, player, or some entity. My analysis begins from the observation that basketball is a game of context. 
@@ -39,5 +43,73 @@
 			<h4>Created By: Hunter M. Macias</h4>
 			
 		</div>
+		
+
+
+	
+		<h2 id='caption'></h2>
+		<div id='court'></div>
+		<div id='stats'></div>
+		<script>
+			const margin = { left: 20, right: 20, top: 20, bottom: 20 };
+			var chartDiv = document.getElementById('court');
+			var court = d3.select(chartDiv).append('court').append('svg');
+			court.attr('width', 480)
+					.attr('height', 480/50*47)
+	
+			court.append('table');
+	
+			var heat_g = court.append('g')
+			var court_g = court.append('g');
+			var title = d3.select(document.getElementById('caption')).append('text');
+			// var data_g = d3.select(chartDiv).append('shot').append('svg')
+	
+			var slider_axis = court.append('g')
+									.attr('class', 'slider-axis');
+			var slider_rect = court.append('g')
+									.attr('class', 'slider-rect');
+	
+			var rect_entity = slider_rect.append('rect');
+	
+			const court_xScale = d3.scaleLinear()
+											.domain([-25, 25]);
+			const court_yScale = d3.scaleLinear()
+											.domain([-4,43]);
+			const shot_xScale = d3.scaleLinear()
+											.domain([-250, 250]);
+			const shot_yScale = d3.scaleLinear()
+											.domain([-45,420]);
+	
+			var color = d3.scaleSequential(d3.interpolateOrRd)
+							.domain([5e-6, 3e-2]); // Points per square pixel.
+	
+	
+	
+			var Basket = court_g.append('circle');
+			var Backboard = court_g.append('rect');
+			var Outterbox = court_g.append('rect');
+			var Innerbox = court_g.append('rect');
+			var CornerThreeLeft = court_g.append('rect');
+			var CornerThreeRight = court_g.append('rect');
+			var OuterLine = court_g.append('rect');
+			var RestrictedArea = court_g.append('path')
+			var TopFreeThrow = court_g.append('path')
+			var BottomFreeThrow = court_g.append('path')
+			var ThreeLine = court_g.append('path')
+			var CenterOuter = court_g.append('path')
+			var CenterInner = court_g.append('path')
+	
+			draw_court();
+			// add_shot();
+			// Slider();
+			// window.addEventListener('resize', draw_court);
+			// window.addEventListener('resize', Slider);
+
+
+		</script>
+		
+
 	</body>
 </html>
+
+<!-- Reference: https://bl.ocks.org/YouthBread/4481cdd85d60a503a986d658404232c8 -->
