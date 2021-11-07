@@ -1,3 +1,7 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #faf8e3;
+  }
 
 .my-container {
 	position: relative;
@@ -17,26 +21,25 @@
 	margin-top: 5%;
 }
 
-body {
-	font-family: 'Open Sans', sans-serif;
-  }
   
-  #court {
+#court {
+	text-align: center;
 	position: relative;
-	left: 35%;
-	right: 0px;
-	top: 50px;
-	bottom: 0px;
-  }
-  
-  .slider rect {
+
+}
+
+.slider rect {
 	fill: gray;
 	shape-rendering: crispEdges;
-  }
-  
-  .slider line {
+}
+
+.slider line {
 	fill: none;
 	stroke: red;
 	opacity: 0.3;
 	shape-rendering: crispEdges;
-  }
+}
+
+.dropdown {
+	top: -50px;
+}
