@@ -18,32 +18,48 @@
 		<script src='dropdwon.js'></script>
 	</head>
 	<body>
+		<!-- <div style="background-image: url('celtic-arena.jpg');"> -->
+		
+
 		<!-- Title -->
 		<div class="header">
 			<h1 class="title-header">Data Analytics in Basketball - Alpha Release</h1>
-			<h3 class="my-container">
-				Description: <br>
-				Basketball statistics are typically analyzed and presented as summaries, either of a game, 
-				season, player, or some entity. My analysis begins from the observation that basketball is a game of context. 
-				The same outcome on a given play can have radically different meanings for the outcome of a game depending on the context. 
-				I will seek to understand on a more contextual level by visually analyzing the game. Specifically, 
-				I want to be able to answer the following: <br>
-				<ol>
-					<li>What is the most efficient way to run an offense?</li>
-					<li>Where do different players shoot best at? </li>
-					<li>How do different offenses stack up against each other, from an efficiency perspective?</li>
-				</ol>
-			
+			<div class="my-container">
+				<h3>
+					<div>
+						<a target = "_blank" href="https://docs.google.com/document/d/1V6OmkMK0QE-xgRdkdAUkz69D2zqicFH3kC8LiiziRDs/edit#heading=h.pygtcckw8fyg">Alpha Release</a>
+					</div>
+					<br>
+					Description: <br><br>
+					Basketball statistics are typically analyzed and presented as summaries, either of a game, 
+					season, player, or some entity. My analysis begins from the observation that basketball is a game of context. 
+					The same outcome on a given play can have radically different meanings for the outcome of a game depending on the context. 
+					I will seek to understand on a more contextual level by visually analyzing the game. Specifically, 
+					I want to be able to answer the following: <br>
+					<ol>
+						<li>What is the most efficient way to run an offense?</li>
+						<li>Where do players shoot their most efficient shot? </li>
+						<li>Can we visualize a trend(s) in the way teams run their offenses?</li>
+					</ol>
 				
-				By answering these questions users will learn how data analytics can be the difference between winning and losing. 
-				By visualizing different offenses users will be able to compare different players and teams against each other, 
-				and how they stack up against each other. These objectives are going to be met in the Features section 
-				because users will be able to see a visual representation of individual players shot selection, in addition to teams as a whole. 
-				By isolating a player's shot selection users will be able to visualize different strengths and weaknesses from a player and a team. 
-			</h3> <br>
-			<h4>Created By: Hunter M. Macias</h4>
+					
+					By answering these questions users will learn how data analytics can be the difference between winning and losing. 
+					By visualizing different offenses users will be able to compare different players and teams against each other, 
+					and how they stack up against one another. These objectives are going to be met in my features section 
+					because users will be able to visualize individual players shot selection -- in addition to teams as a whole. 
+					By isolating a player's shot selection users will be able to visualize different strengths and weaknesses in an offense. Users will also
+					be able to visualize any trends, if any, in a players shot selection.
+				</h3> <br>
+				<h4>Created By: Hunter M. Macias</h4>
+			</div>
+
+			<div class="dropdown">
+				<script type='text/javascript' src='dropdown.js'></script>
+			</div>
 			
 		</div>
+
+		
 		
 
 
@@ -52,9 +68,9 @@
 		<div id='court'></div>
 		<div id='stats'></div>
 		
-		<div class="dropdown">
+		<!-- <div class="dropdown">
 			<script type='text/javascript' src='dropdown.js'></script>
-		</div>
+		</div> -->
 
 		<script>
 			const margin = { left: 20, right: 20, top: 20, bottom: 20 };
@@ -113,8 +129,18 @@
 
 
 		</script>
-		
-	
+
+		<div class="my-container">
+
+			<h2 class="my-container">Points Per Game Random Player Sample Data</h2>
+			<h4>Data Created Using Python - Matplotlib</h4>
+			<img src="./ppg-graph.png" alt="ppg-bar-graph" height="400" width="1200">
+			<br>
+			<img src="./ppg-scatter.png" alt="ppg-scatter-plot" height="400" width="1200">
+
+		</div>
+
+
 
 	</body>
 </html>
