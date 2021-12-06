@@ -9,7 +9,7 @@ function add_court_component(){
 }
 
 function draw_court(){
-    const width = 430;
+    const width = court_width;
     const height = width/50*47;
     court_g.attr("width", width)
            .attr("height", height)
