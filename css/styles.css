@@ -1,0 +1,83 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+#float_court {
+    position: sticky;
+    top: -1px;
+}
+
+
+.slider rect {
+    fill: gray;
+    shape-rendering: crispEdges;
+}
+
+.slider line {
+    fill: none;
+    stroke: red;
+    opacity: 0.3;
+    shape-rendering: crispEdges;
+}
+
+table {
+    border-spacing: 0;
+}
+
+td {
+    padding: 4px;
+    height: 4ex;
+}
+
+th {
+    padding: 4px;
+    height: 4ex;
+}
+
+#x_label,
+#y_label {
+    fill: #AAAAAA;
+    font-size: 10pt;
+}
+
+.data-content {
+    position: relative;
+    top: 50px;
+    background-color: #ffe6c9;
+}
+
+.text-white {
+    color:white;
+  }
+  
+.display-3 {
+    position: relative;
+    top: 10px;
+}
+
+.force-scroll {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+
+.btn-outline {
+    outline-color: red;
+    outline-style: solid;
+}
+
+.btn-outline:hover {
+    background-color: #fce6c2;
+}
+
+
+/* Alpha Release CSS */
+
+.alpha-content {
+    position: relative;
+    top: 100px;
+}
